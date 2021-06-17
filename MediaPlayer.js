@@ -1,23 +1,33 @@
 class MediaPlayer {
-  constructor(video) {
-    const { el } = video;
-    this.element = el;
+  constructor(video, plugins) {
+    this.player = video;
+    this.plugins = plugins || [];
+    this._initPlugins();
+  }
+
+  _initPlugins() {
+    this.plugins.forEach((item) => item.run(this));
   }
 
   play() {
-    this.element.play();
+    this.player.play();
+  }
+
+  mute() {
+    this.player.muted = true;
   }
 
   pause() {
-    this.element.pause();
+    this.player.pause();
+  }
+  muteUnmute() {
+    this.player.muted
+      ? (this.player.muted = false)
+      : (this.player.muted = true);
   }
 
   togglePlay() {
-    if (this.element.paused) {
-      this.play();
-    } else {
-      this.pause();
-    }
+    this.player.paused ? this.play() : this.pause();
   }
 }
 
