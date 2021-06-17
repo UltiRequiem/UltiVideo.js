@@ -1,18 +1,19 @@
 class MediaPlayer {
-  constructor(config) {
-    this.media = config.el;
+  constructor(video) {
+    const { el } = video;
+    this.element = el;
   }
 
   play() {
-    this.media.play();
+    this.element.play();
   }
 
   pause() {
-    this.media.pause();
+    this.element.pause();
   }
 
   togglePlay() {
-    if (this.media.paused) {
+    if (this.element.paused) {
       this.play();
     } else {
       this.pause();
