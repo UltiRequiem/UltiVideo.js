@@ -17,6 +17,20 @@ class MediaPlayer {
     this.player.muted = true;
   }
 
+  decreaseVolumen() {
+    if (this.player.volume === 0 || this.player.volume === 1) {
+      return;
+    }
+    this.player.volume -= 0.1;
+  }
+
+  increaseVolumen() {
+    if (this.player.volume === 0 || this.player.volume === 1) {
+      return;
+    }
+    this.player.volume += 0.1;
+  }
+
   pause() {
     this.player.pause();
   }
