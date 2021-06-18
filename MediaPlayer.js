@@ -1,11 +1,11 @@
 class MediaPlayer {
-  constructor(video, plugins) {
-    this.player = video;
-    this.plugins = plugins || [];
-    this._initPlugins();
+  constructor(config) {
+    this.player = config.element;
+    this.plugins = config.plugins || [];
+    this.initPlugins();
   }
 
-  _initPlugins() {
+  initPlugins() {
     this.plugins.forEach((item) => item.run(this));
   }
 

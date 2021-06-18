@@ -9,7 +9,7 @@ const muteUnmute = document.querySelector('#unmuteMute');
 const increaseVolumen = document.querySelector('#increaseVolumen');
 const decreaseVolumen = document.querySelector('#decreaseVolumen');
 
-const player = new MediaPlayer(video, [new AutoPlay()]);
+const player = new MediaPlayer({ element: video, plugins: [new AutoPlay()] });
 
 muteUnmute.onclick = () => player.muteUnmute();
 
