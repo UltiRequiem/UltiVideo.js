@@ -22,7 +22,7 @@ class MediaPlayer {
   }
 
   muteUnmute() {
-    this.player.muted == true
+    this.player.muted
       ? (this.player.muted = false)
       : (this.player.muted = true);
   }
