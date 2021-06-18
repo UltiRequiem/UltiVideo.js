@@ -18,16 +18,12 @@ class MediaPlayer {
   }
 
   decreaseVolumen() {
-    if (this.player.volume === 0 || this.player.volume === 1) {
-      return;
-    }
+    if (this.player.volume === 0) return;
     this.player.volume -= 0.1;
   }
 
   increaseVolumen() {
-    if (this.player.volume === 0 || this.player.volume === 1) {
-      return;
-    }
+    if (this.player.volume === 1) return;
     this.player.volume += 0.1;
   }
 
@@ -36,9 +32,11 @@ class MediaPlayer {
   }
 
   muteUnmute() {
-    this.player.muted
-      ? (this.player.muted = false)
-      : (this.player.muted = true);
+    if (this.player.muted) {
+      this.player.muted = false;
+    } else {
+      this.player.muted = true;
+    }
   }
 
   togglePlay() {
