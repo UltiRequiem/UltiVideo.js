@@ -18,7 +18,7 @@ class MediaPlayer {
   }
 
   decreaseVolumen() {
-    if (this.player.volume === 0) return;
+    if (this.player.volume <= 0.1) return;
     this.player.volume -= 0.1;
   }
 
