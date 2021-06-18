@@ -20,8 +20,9 @@ class MediaPlayer {
   pause() {
     this.player.pause();
   }
+
   muteUnmute() {
-    this.player.muted
+    this.player.muted == true
       ? (this.player.muted = false)
       : (this.player.muted = true);
   }
