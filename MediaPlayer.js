@@ -37,7 +37,7 @@ class MediaPlayer {
 
   toggleMute() {
     // eslint-disable-next-line no-unused-expressions
-    this.media.muted ? this.unmute() : this.mute();
+    this.player.muted ? this.unmute() : this.mute();
   }
 
   togglePlay() {
