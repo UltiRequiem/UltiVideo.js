@@ -17,6 +17,10 @@ class MediaPlayer {
     this.player.muted = true;
   }
 
+  unmute() {
+    this.player.muted = false;
+  }
+
   decreaseVolumen() {
     if (this.player.volume <= 0.1) return;
     this.player.volume -= 0.1;
@@ -31,15 +35,13 @@ class MediaPlayer {
     this.player.pause();
   }
 
-  muteUnmute() {
-    if (this.player.muted) {
-      this.player.muted = false;
-    } else {
-      this.player.muted = true;
-    }
+  toggleMute() {
+    // eslint-disable-next-line no-unused-expressions
+    this.media.muted ? this.unmute() : this.mute();
   }
 
   togglePlay() {
+    // eslint-disable-next-line no-unused-expressions
     this.player.paused ? this.play() : this.pause();
   }
 }
