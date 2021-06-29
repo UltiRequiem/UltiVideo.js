@@ -1,11 +1,17 @@
+/**
+ * General Class
+ *
+ * @class MediaPlayer
+ */
+
 class MediaPlayer {
-  constructor(config) {
-    this.player = config.element;
-    this.plugins = config.plugins || [];
-    this.initPlugins();
+  constructor({ element, plugins = [] }) {
+    this.player = element;
+    this.plugins = plugins;
+    this.#initPlugins();
   }
 
-  initPlugins() {
+  #initPlugins() {
     this.plugins.forEach((item) => item.run(this));
   }
 
