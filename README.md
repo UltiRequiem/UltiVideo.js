@@ -1,4 +1,4 @@
-# Platzi Video
+# UltiVideo
 
 [![GitMoji](https://img.shields.io/badge/gitmoji-%20😜-FFDD67.svg)](https://gitmoji.dev)
 [![Language Grade](https://img.shields.io/lgtm/grade/javascript/g/UltiRequiem/UltiVideo.js.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/UltiRequiem/UltiVideo.js/context:javascript)
