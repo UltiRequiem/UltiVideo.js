@@ -1,8 +1,8 @@
 class AutoPlay {
   // eslint-disable-next-line class-methods-use-this
   run(player) {
-    player.play();
+    player.play()
   }
 }
 
-export default AutoPlay;
+export default AutoPlay
