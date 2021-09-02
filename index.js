@@ -16,4 +16,3 @@ togglePlay.onclick = () => player.togglePlay()
 
 increaseVolumen.onclick = () => player.increaseVolumen()
 decreaseVolumen.onclick = () => player.decreaseVolumen()
-
